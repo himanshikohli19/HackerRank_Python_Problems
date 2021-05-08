@@ -10,10 +10,7 @@ n=int(input())
 for _ in range(n):
         name = input()
         score = float(input())
-        list1=[]
-        list1.append(name)
-        list1.append(score)
-        matrix.append(list1) #matrix creation [[]]
+        matrix.append([name,score]) #matrix creation [[]]
         
 list2=[] #to store the scores
 for i in range(n):
