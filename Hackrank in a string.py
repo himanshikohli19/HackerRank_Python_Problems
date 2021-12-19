@@ -1,0 +1,3 @@
+'''
+HackerRank in a string
+'''
