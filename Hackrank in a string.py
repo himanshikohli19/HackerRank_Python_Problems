@@ -1,3 +1,0 @@
-'''
-HackerRank in a string
-'''
