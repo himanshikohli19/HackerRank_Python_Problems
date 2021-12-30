@@ -1,5 +1,5 @@
 '''
-ICE CREAM PALOUR -Hackerrank
+ICE CREAM PALOUR - Hackerrank Problem Solving
 https://www.hackerrank.com/challenges/icecream-parlor/problem?isFullScreen=true
 
 Two friends like to pool their money and go to the ice cream parlor.
