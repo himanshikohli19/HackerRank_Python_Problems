@@ -9,18 +9,28 @@ one value per line as follows:
 - If i is not a multiple of 4 or 5, print value of i
 '''
 #TIME COMPLEXITY: O(N)
-
+#SPACE COMPLEXITY: O(1)
 def FizzBuzzProblem(N):
+    c4=0
+    c5=0
     for i in range(1,N+1):
-        if i%4==0 and i%5==0:
-            print("FizzBuzz")
-        elif i%4==0:
-            print("Fizz")
-        elif i%5==0:
-            print("Buzz")
-        else:
+        c4+=1
+        c5+=1
+        r=''
+        if (c4==4):
+            r+='Fizz'
+            c4=0
+
+        if (c5==5):
+            r+='Buzz'
+            c5=0
+
+        if r=='':
             print(i)
-   
+
+        else:
+            print(r)
+
 if __name__ == '__main__':
     n = 30
     FizzBuzzProblem(n)
