@@ -10,27 +10,23 @@ one value per line as follows:
 '''
 #TIME COMPLEXITY: O(N)
 #SPACE COMPLEXITY: O(1)
-def FizzBuzzProblem(N):
-    c4=0
-    c5=0
-    for i in range(1,N+1):
-        c4+=1
-        c5+=1
-        r=''
-        if (c4==4):
-            r+='Fizz'
-            c4=0
+def fizz_buzz(number):
+    count_four = count_five = 0
 
-        if (c5==5):
-            r+='Buzz'
-            c5=0
+    for num in range(1, number + 1):
+        count_four += 1
+        count_five += 1
 
-        if r=='':
-            print(i)
+        res = ""
+        if count_four == 4:
+            res += "Fizz"
+            count_four = 0
+        if count_five == 5:
+            res += "Buzz"
+            count_five = 0
 
-        else:
-            print(r)
+        print(res if res else num)
 
-if __name__ == '__main__':
-    n = 30
-    FizzBuzzProblem(n)
+#Driver Code
+n = 30
+fizz_buzz(n)
