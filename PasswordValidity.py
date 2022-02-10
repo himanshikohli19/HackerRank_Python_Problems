@@ -6,22 +6,20 @@ Write a Python program to check the validity of password input by users.
 - Minimum length of 8 characters.
 - Maximum length 16 characters.
 '''
+#TIME COMPLEXITY: O(N)
 
 def PasswordValidity(n, password):
 
-    numbers = "0123456789"
-    lower_case = "abcdefghijklmnopqrstuvwxyz"
-    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     special_characters = "!@#$%^&*()-+_"
-    cdigit=clower=cupper=cspchar=sum1=0
+    cdigit=clower=cupper=cspchar=0 #initializing counters
 
     if n>=8 and n<=16:
         for ch in password:
-            if ch in numbers:
+            if ch.isdigit():
                 cdigit+=1
-            if ch in lower_case:
+            if ch.islower():
                 clower+=1
-            if ch in upper_case:
+            if ch.isupper():
                 cupper+=1
             if ch in special_characters:
                 cspchar+=1
@@ -31,9 +29,10 @@ def PasswordValidity(n, password):
     else:
         return("Invalid Password! Try Again.")
  
+#Driver Code
 if __name__ == '__main__':
     password = input("Enter Password: ")
-    n=len(password)
-    answer = PasswordValidity(n, password)
+    n=len(password) #n stores the length of the input password
+    answer = PasswordValidity(n, password) # Function Call
     print(answer)
 
