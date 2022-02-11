@@ -44,11 +44,11 @@ def minimumNumber(n, password):
     special_characters = "!@#$%^&*()-+"
     cdigit=clower=cupper=cspchar=sum1=0
     for ch in password:
-        if ch in numbers:
+        if ch.isdigit():
             cdigit+=1
-        if ch in lower_case:
+        if ch.islower():
             clower+=1
-        if ch in upper_case:
+        if ch.isupper():
             cupper+=1
         if ch in special_characters:
             cspchar+=1
